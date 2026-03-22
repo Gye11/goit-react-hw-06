@@ -1,7 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addContact, selectContacts } from "../redux/contactsSlice.js";
+import { addContact, selectContacts } from "../redux/contactsSlice";
 import { nanoid } from "nanoid";
-import "./ContactForm.css";
+import toast from "react-hot-toast";
+import "./ContactsForm.css";
 
 const ContactsForm = () => {
   const dispatch = useDispatch();
@@ -14,12 +15,17 @@ const ContactsForm = () => {
     const name = form.elements.name.value.trim();
     const number = form.elements.number.value.trim();
 
+    if (!name || !number) {
+      toast.error("Please fill all fields ⚠️");
+      return;
+    }
+
     const isExist = contacts.some(
       (contact) => contact.name.toLowerCase() === name.toLowerCase(),
     );
 
     if (isExist) {
-      alert("This contact already exists!");
+      toast.error("This contact already exists ❌");
       return;
     }
 
@@ -31,13 +37,29 @@ const ContactsForm = () => {
       }),
     );
 
+    toast.success("Contact added 🎉");
+
     form.reset();
   };
 
   return (
     <form className="form" onSubmit={handleSubmit}>
-      <input className="input" name="name" placeholder="Name" required />
-      <input className="input" name="number" placeholder="Number" required />
+      <input
+        className="input"
+        name="name"
+        placeholder="Enter name"
+        autoComplete="off"
+        required
+      />
+
+      <input
+        className="input"
+        name="number"
+        placeholder="Enter number"
+        autoComplete="off"
+        required
+      />
+
       <button className="addBtn" type="submit">
         Add Contact
       </button>

@@ -32,3 +32,10 @@
     transform: translateY(0);
   }
 }
+
+.empty {
+  text-align: center;
+  margin-top: 20px;
+  color: gray;
+  font-style: italic;
+}
