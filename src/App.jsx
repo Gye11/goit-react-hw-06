@@ -1,6 +1,6 @@
-import ContactsForm from "./components/ContactsForm";
-import ContactList from "./components/ContactList";
-import SearchBox from "./components/SearchBox";
+import ContactsForm from "./components/ContactForm.jsx";
+import ContactList from "./components/ContactList.jsx";
+import SearchBox from "./components/SearchBox.jsx";
 import ThemeToggle from "./components/ThemeToggle"; // 👈 EKLENDİ
 import "./App.css";
 
