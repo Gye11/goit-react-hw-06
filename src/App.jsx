@@ -1,7 +1,7 @@
-import ContactsForm from "./components/ContactsForm.jsx";
-import ContactList from "./components/ContactList.jsx";
-import SearchBox from "./components/SearchBox.jsx";
-import ThemeToggle from "./components/ThemeToggle.jsx"; // 👈 EKLENDİ
+import ContactsForm from "./components/ContactsForm.";
+import ContactList from "./components/ContactList.";
+import SearchBox from "./components/SearchBox.";
+import ThemeToggle from "./components/ThemeToggle."; // 👈 EKLENDİ
 import "./App.css";
 
 import { Toaster } from "react-hot-toast";
