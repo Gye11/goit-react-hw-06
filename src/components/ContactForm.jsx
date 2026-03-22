@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { addContact, selectContacts } from "../components/redux/contactsSlice";
+import { addContact, selectContacts } from "../redux/contactsSlice.js";
 import { nanoid } from "nanoid";
 import "./ContactForm.css";
 
