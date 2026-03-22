@@ -2,9 +2,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { addContact, selectContacts } from "../redux/contactsSlice";
 import { nanoid } from "nanoid";
 import toast from "react-hot-toast";
-import "./ContactsForm.css";
+import "./ContactForm.css";
 
-const ContactsForm = () => {
+const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts);
 
